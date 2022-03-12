@@ -158,7 +158,6 @@ rotation = -1.5708
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "RunRight"
 anims/IdleDown = SubResource( 9 )
 anims/IdleLeft = SubResource( 7 )
 anims/IdleRight = SubResource( 8 )
