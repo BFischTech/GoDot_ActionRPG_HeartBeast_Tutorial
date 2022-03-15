@@ -22,7 +22,7 @@ func _ready():
 
 #delta - time last frame took to process (physics property, basically 1/60)  delta can change because of framerate
 
-func _physics_process(delta):
+func _process(delta):
 	match state:
 		MOVE: 
 			move_state(delta)
