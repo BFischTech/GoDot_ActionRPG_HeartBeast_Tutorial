@@ -641,6 +641,7 @@ states/Run/node = SubResource( 27 )
 states/Run/position = Vector2( 506.2, 91.4723 )
 transitions = [ "Idle", "Run", SubResource( 28 ), "Run", "Idle", SubResource( 29 ), "Idle", "Attack", SubResource( 40 ), "Attack", "Idle", SubResource( 41 ), "Idle", "Roll", SubResource( 52 ), "Roll", "Idle", SubResource( 53 ) ]
 start_node = "Idle"
+graph_offset = Vector2( -299.309, 20.5705 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=17]
 
@@ -650,6 +651,9 @@ height = 12.0
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 2
 script = ExtResource( 2 )
+ACCELERATION = 500
+MAX_SPEED = 90
+ROLL_SPEED = 115
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -2, -10 )
@@ -685,10 +689,10 @@ anims/RunUp = SubResource( 6 )
 tree_root = SubResource( 30 )
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 17 )
-parameters/Attack/blend_position = Vector2( -0.0727435, 0.542964 )
-parameters/Idle/blend_position = Vector2( -0.00165343, -0.00742191 )
-parameters/Roll/blend_position = Vector2( -0.0026722, 0.00134408 )
-parameters/Run/blend_position = Vector2( 0, 0 )
+parameters/Attack/blend_position = Vector2( 0, 1 )
+parameters/Idle/blend_position = Vector2( 0, 1 )
+parameters/Roll/blend_position = Vector2( 0, 1 )
+parameters/Run/blend_position = Vector2( 0, 1 )
 
 [node name="HitboxPivot" type="Position2D" parent="."]
 position = Vector2( 0, -4 )
