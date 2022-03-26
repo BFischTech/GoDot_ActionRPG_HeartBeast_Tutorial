@@ -56,16 +56,15 @@ __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
 
+[node name="ShadowSprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 6 )
 animation = "fly"
-frame = 1
+frame = 2
 playing = true
 offset = Vector2( 0, -12 )
-
-[node name="ShadowSprite" type="Sprite" parent="."]
-visible = false
-texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -80,6 +79,7 @@ position = Vector2( 0, -14 )
 shape = SubResource( 8 )
 
 [node name="Stats" parent="." instance=ExtResource( 5 )]
+max_health = 3
 
 [node name="PlayerDetectionZone" parent="." instance=ExtResource( 6 )]
 visible = false

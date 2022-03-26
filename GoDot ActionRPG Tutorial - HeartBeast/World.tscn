@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=60 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://World/Grass.tscn" type="PackedScene" id=6]
 [ext_resource path="res://World/Grass.gd" type="Script" id=7]
 [ext_resource path="res://Enemies/Bat.tscn" type="PackedScene" id=8]
+[ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=9]
+[ext_resource path="res://World/Tree.tscn" type="PackedScene" id=10]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -521,7 +523,7 @@ position = Vector2( 86, 9 )
 position = Vector2( 233, 98 )
 
 [node name="Bush4" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 31, 90 )
+position = Vector2( 17, 144 )
 
 [node name="Bush6" parent="YSort/Bushes" instance=ExtResource( 1 )]
 position = Vector2( 229, 45 )
@@ -574,6 +576,14 @@ position = Vector2( 107, -6 )
 [node name="Grass9" parent="YSort/Grass" instance=ExtResource( 6 )]
 position = Vector2( 130, -9 )
 
+[node name="Trees" type="YSort" parent="YSort"]
+
+[node name="Tree" parent="YSort/Trees" instance=ExtResource( 10 )]
+position = Vector2( 255, 151 )
+
+[node name="Tree2" parent="YSort/Trees" instance=ExtResource( 10 )]
+position = Vector2( 31, 93 )
+
 [node name="Bat1" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 78, 49 )
 
@@ -582,3 +592,13 @@ position = Vector2( 139, 120 )
 
 [node name="Bat3" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 205, 66 )
+
+[node name="HealthUI" parent="." instance=ExtResource( 9 )]
+
+[node name="HeartUIEmpty" parent="HealthUI" index="0"]
+expand = true
+
+[node name="HeartUIFull" parent="HealthUI" index="1"]
+expand = true
+
+[editable path="HealthUI"]
